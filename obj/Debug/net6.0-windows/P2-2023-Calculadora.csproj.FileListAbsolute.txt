@@ -1,0 +1,17 @@
+C:\Users\ifire\Developer\P2-2023-Calculadora\bin\Debug\net6.0-windows\P2-2023-Calculadora.exe
+C:\Users\ifire\Developer\P2-2023-Calculadora\bin\Debug\net6.0-windows\P2-2023-Calculadora.deps.json
+C:\Users\ifire\Developer\P2-2023-Calculadora\bin\Debug\net6.0-windows\P2-2023-Calculadora.runtimeconfig.json
+C:\Users\ifire\Developer\P2-2023-Calculadora\bin\Debug\net6.0-windows\P2-2023-Calculadora.dll
+C:\Users\ifire\Developer\P2-2023-Calculadora\bin\Debug\net6.0-windows\P2-2023-Calculadora.pdb
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.csproj.AssemblyReference.cache
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2_2023_Calculadora.Form1.resources
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.csproj.GenerateResource.cache
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.AssemblyInfoInputs.cache
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.AssemblyInfo.cs
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.dll
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\refint\P2-2023-Calculadora.dll
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.pdb
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\P2-2023-Calculadora.genruntimeconfig.cache
+C:\Users\ifire\Developer\P2-2023-Calculadora\obj\Debug\net6.0-windows\ref\P2-2023-Calculadora.dll
