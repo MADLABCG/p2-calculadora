@@ -7,128 +7,151 @@ namespace P2_2023_Calculadora
             InitializeComponent();
         }
 
-        string pantalla;
-
-        double value1;
-        double value2;
-        string temporal;
-        string operador;
-        double resultado;
+        string? pantalla;
+        double? value1;
+        double? value2;
+        string? temporal;
+        string? operador;
+        double? resultado;
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 1;
+            temporal = temporal + 1;
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 2;
+            temporal = temporal + 2;
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 3;
+            temporal = temporal + 3;
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 4;
+            temporal = temporal + 4;
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 5;
-        }   
+            temporal = temporal + 5;
+        }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 6;
+            temporal = temporal + 6;
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 7;
+            temporal = temporal + 7;
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 8;
+            temporal = temporal + 8;
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 9;
+            temporal = temporal + 9;
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + 0;
+            temporal = temporal + 0;
         }
-        private void btnPunto_Click(object sender, EventArgs e)
+
+        private void btn_punto_Click(object sender, EventArgs e)
         {
-            temporal.Text = temporal.Text + ".";
+            temporal = temporal + ".";
         }
 
         private void btn_suma_Click(object sender, EventArgs e)
         {
-            operador.Text = "sumar";
-            mostar_pantalla(operador);
+            operador = "sumar";
+            mostar_pantalla("+");
         }
 
         private void btn_resta_Click(object sender, EventArgs e)
         {
-            operador.Text = "restar";
-            mostar_pantalla(operador);
+            operador = "restar";
+            mostar_pantalla("-");
         }
 
         private void btn_multiplicar_Click(object sender, EventArgs e)
         {
-            operador.Text = "multiplicar";
-            mostar_pantalla(operador);
+            operador = "multiplicar";
+            mostar_pantalla("X");
         }
 
         private void btn_dividir_Click(object sender, EventArgs e)
         {
-            operador.Text = "dividir";
-            mostar_pantalla(operador);
+            operador = "dividir";
+            mostar_pantalla("/");
         }
 
         private void btn_ejecutar_Click(object sender, EventArgs e)
         {
-            if(value1 == null)
+            if (temporal != null)
             {
-                value1 = (double)temporal;
-                mostar_pantalla((string)value1);
-                temporal = null;
-            } else {
-                if(value2 == null)
+                if (value1 == null)
                 {
-                    value2 = (double)temporal;
-                    mostar_pantalla((string)value2);
+                    try
+                    {
+                        value1 = Double.Parse(temporal);
+                    }
+                    catch
+                    {
+                        value1 = 0;
+                    }
+                    mostar_pantalla(value1.ToString());
                     temporal = null;
+                }
+                else
+                {
+                    if (value2 == null)
+                    {
+                        try
+                        {
+                            value2 = Double.Parse(temporal);
+                        }
+                        catch
+                        {
+                            value2 = 0;
+                        }
+                        mostar_pantalla(value2.ToString());
+                        temporal = null;
+                    }
                 }
             }
 
-            if(value1 != null && value2 != null && operador != null)
+            if (value1 != null && value2 != null && operador != null)
             {
-                if(operador == "sumar")
+                if (operador == "sumar")
                 {
                     resultado = value1 + value2;
+                    mostar_pantalla("Resultado: " + resultado.ToString());
                     limpiar();
                 }
-                if(operador == "restar")
+                if (operador == "restar")
                 {
                     resultado = value1 - value2;
+                    mostar_pantalla("Resultado: " + resultado.ToString());
                     limpiar();
                 }
-                if(operador == "multiplicar")
+                if (operador == "multiplicar")
                 {
                     resultado = value1 * value2;
+                    mostar_pantalla("Resultado: " + resultado.ToString());
                     limpiar();
                 }
-                if(operador == "dividir")
+                if (operador == "dividir")
                 {
                     resultado = value1 / value2;
+                    mostar_pantalla("Resultado: " + resultado.ToString());
                     limpiar();
                 }
             }
@@ -140,14 +163,10 @@ namespace P2_2023_Calculadora
             limpiar_pantalla();
         }
 
-        private void btn_borrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void limpiar_pantalla()
         {
             pantalla = null;
+            textBox1.Text = string.Empty;
         }
 
         private void limpiar()
@@ -160,7 +179,8 @@ namespace P2_2023_Calculadora
 
         private void mostar_pantalla(string nuevo)
         {
-            pantalla = pantalla.Text + nuevo;
+            pantalla = pantalla + System.Environment.NewLine + nuevo;
+            textBox1.Text = pantalla;
         }
     }
 }

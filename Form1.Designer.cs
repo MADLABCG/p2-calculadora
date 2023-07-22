@@ -43,9 +43,9 @@
             btn_multiplicar = new Button();
             btn_dividir = new Button();
             btn_ejecutar = new Button();
-            btn_borrar = new Button();
             btn_limpiar = new Button();
             textBox1 = new TextBox();
+            btn_punto = new Button();
             SuspendLayout();
             // 
             // btn1
@@ -190,23 +190,13 @@
             // 
             // btn_ejecutar
             // 
-            btn_ejecutar.Location = new Point(255, 269);
+            btn_ejecutar.Location = new Point(257, 269);
             btn_ejecutar.Name = "btn_ejecutar";
             btn_ejecutar.Size = new Size(75, 226);
             btn_ejecutar.TabIndex = 14;
             btn_ejecutar.Text = "Ejecutar";
             btn_ejecutar.UseVisualStyleBackColor = true;
             btn_ejecutar.Click += btn_ejecutar_Click;
-            // 
-            // btn_borrar
-            // 
-            btn_borrar.Location = new Point(174, 443);
-            btn_borrar.Name = "btn_borrar";
-            btn_borrar.Size = new Size(75, 52);
-            btn_borrar.TabIndex = 15;
-            btn_borrar.Text = "Borrar";
-            btn_borrar.UseVisualStyleBackColor = true;
-            btn_borrar.Click += btn_borrar_Click;
             // 
             // btn_limpiar
             // 
@@ -220,7 +210,8 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 19);
+            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(12, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -228,14 +219,25 @@
             textBox1.TabIndex = 17;
             textBox1.TextAlign = HorizontalAlignment.Right;
             // 
+            // btn_punto
+            // 
+            btn_punto.Location = new Point(174, 443);
+            btn_punto.Name = "btn_punto";
+            btn_punto.Size = new Size(75, 52);
+            btn_punto.TabIndex = 18;
+            btn_punto.Text = ".";
+            btn_punto.UseVisualStyleBackColor = true;
+            btn_punto.Click += btn_punto_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(344, 520);
+            Controls.Add(btn_punto);
             Controls.Add(textBox1);
             Controls.Add(btn_limpiar);
-            Controls.Add(btn_borrar);
             Controls.Add(btn_ejecutar);
             Controls.Add(btn_dividir);
             Controls.Add(btn_multiplicar);
@@ -274,8 +276,8 @@
         private Button btn_multiplicar;
         private Button btn_dividir;
         private Button btn_ejecutar;
-        private Button btn_borrar;
         private Button btn_limpiar;
         private TextBox textBox1;
+        private Button btn_punto;
     }
 }
