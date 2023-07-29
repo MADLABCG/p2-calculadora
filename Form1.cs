@@ -155,6 +155,16 @@ namespace P2_2023_Calculadora
                     limpiar();
                 }
             }
+
+            if (operador == "itbis")
+            {
+                if (value1 != null)
+                {
+                    resultado = value1 * 0.18;
+                    mostar_pantalla("Itbis: " + resultado.ToString());
+                    limpiar();
+                }
+            }
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
@@ -181,6 +191,12 @@ namespace P2_2023_Calculadora
         {
             pantalla = pantalla + System.Environment.NewLine + nuevo;
             textBox1.Text = pantalla;
+        }
+
+        private void btn_itbis_Click(object sender, EventArgs e)
+        {
+            operador = "itbis";
+            mostar_pantalla("Itbis");
         }
     }
 }

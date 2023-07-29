@@ -46,6 +46,7 @@
             btn_limpiar = new Button();
             textBox1 = new TextBox();
             btn_punto = new Button();
+            btn_itbis = new Button();
             SuspendLayout();
             // 
             // btn1
@@ -190,9 +191,9 @@
             // 
             // btn_ejecutar
             // 
-            btn_ejecutar.Location = new Point(257, 269);
+            btn_ejecutar.Location = new Point(257, 327);
             btn_ejecutar.Name = "btn_ejecutar";
-            btn_ejecutar.Size = new Size(75, 226);
+            btn_ejecutar.Size = new Size(75, 168);
             btn_ejecutar.TabIndex = 14;
             btn_ejecutar.Text = "Ejecutar";
             btn_ejecutar.UseVisualStyleBackColor = true;
@@ -229,12 +230,23 @@
             btn_punto.UseVisualStyleBackColor = true;
             btn_punto.Click += btn_punto_Click;
             // 
+            // btn_itbis
+            // 
+            btn_itbis.Location = new Point(255, 269);
+            btn_itbis.Name = "btn_itbis";
+            btn_itbis.Size = new Size(75, 52);
+            btn_itbis.TabIndex = 19;
+            btn_itbis.Text = "ITBIS";
+            btn_itbis.UseVisualStyleBackColor = true;
+            btn_itbis.Click += btn_itbis_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(344, 520);
+            Controls.Add(btn_itbis);
             Controls.Add(btn_punto);
             Controls.Add(textBox1);
             Controls.Add(btn_limpiar);
@@ -279,5 +291,6 @@
         private Button btn_limpiar;
         private TextBox textBox1;
         private Button btn_punto;
+        private Button btn_itbis;
     }
 }
